@@ -153,3 +153,22 @@ $(document).ready(function() {
               e.preventDefault();
       });
   }
+
+// $('body').on('change', '#country-auto-complete', function () {
+// 	if (!$(this).val()) {
+// 		$('#country select option').removeAttr('selected')
+// 	}
+//
+// });
+
+var selectCountryEl = document.querySelector('#country-auto-complete');
+if (selectCountryEl) {
+	accessibleAutocomplete.enhanceSelectElement({
+		autoselect: true,
+		id: 'country-auto-complete',
+		defaultValue: "",
+		minLength: 2,
+		selectElement: selectCountryEl
+	})
+}
+
